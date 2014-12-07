@@ -1,0 +1,44 @@
+/*
+ Template Name: New Design
+ By Abok Isaac
+ @version: 1.0.0
+ @contact: abokisaac@gmail.com
+ Follow me on Twitter: @iabok
+*/
+
+/* ************************** */
+
+//Global CSS classes used for all template.
+@import "menu_sideslide";
+
+
+//compass library
+@import "compass";
+
+//compass inbuilt blueprint library
+//@import "blueprint";
+
+//Bootstrapp sass files
+@import "bootstrap";
+
+//Bourbon library
+//@import "bourbon/bourbon";
+
+//Define mixins used in the template.
+@import "New Design Mixins/new_design_mixins";
+
+//Global CSS classes used for all template.
+@import "base";
+//header style sheet
+@import "new_design_header";
+
+//services stylesheet
+@import "new_design_services";
+
+//Happy Clients stylesheet
+@import "new_design_clients";
+
+//footer stylesheet
+@import "new_design_footer";
+
+//Sorry... this is the end of the stylesheet

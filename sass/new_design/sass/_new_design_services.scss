@@ -1,0 +1,217 @@
+/* SERVICES */
+@import "compass/utilities/general/clearfix";
+@mixin services-content{
+		//margin-bottom:500px;
+		//max-height:500px;
+	}
+
+.service-header{
+	@extend h1;
+		font-weight:bold;
+		//font-family:Arial;
+		font-size:25px;
+		color:$primary_color;
+		text-align:center;
+		text-transform:uppercase;
+		text-shadow: 1px 1px 1px 1px #505253;
+		margin-top:20px;
+		margin-bottom:10px;	
+}
+
+.services-connector{
+	background-color:$header_background;
+	background-position:center;
+	width:120px;
+	height:30px;
+	position:relative;
+	top:-110px;
+	left:180px;
+
+	&:hover{
+		background-color:lighten($header_background, 1%);
+		-webkit-transition: all 0.3s ease 0s;
+	    -moz-transition: all 0.3s ease 0s;
+	    -o-transition: all 0.3s ease 0s;
+	    transition: all 0.3s ease 0s;
+
+	}
+
+	@media screen and (max-width: 961px) {
+	display:none;
+
+	} 
+
+
+}
+.new-design-services{
+
+    @media screen and (max-width: 360px){
+ 		width:290px;
+ 		text-align:left;
+ 		text-indent:-100px;
+
+
+	} 
+}
+//Rounded background shapes
+
+.cloud-rounded{
+	background-color:$header_background;
+	background-image: url('../images/cloud.png');
+	background-repeat:no-repeat;
+	background-position:center;
+	top:50px;
+	left:30px;
+	width:200px;
+	height:200px;
+	@include rounded_borders(100%);
+
+	&:hover{
+		cursor:pointer;
+		background-color:lighten($header_background, 1%);
+		-webkit-transition: all 0.3s ease 0s;
+	    -moz-transition: all 0.3s ease 0s;
+	    -o-transition: all 0.3s ease 0s;
+	    transition: all 0.3s ease 0s;
+
+	}
+
+    @media screen and (max-width: 360px){
+    	background-image: url('../images/cloud-small.png');
+		width:100px;
+		height:100px;
+		position:relative;
+		left:-60px;
+		top:0px;	
+	} 
+	//left:30px;
+
+	@media screen and (max-width: 768px) {
+	margin-left:50px;
+
+	} 
+
+
+	@media screen and (max-width: 961px) {
+		background-position:center;
+		margin-top:30px;
+		//margin-left:250px;
+
+	} 
+
+	@media screen and (min-width: 768px) and (max-width:992px) {
+		margin-left:50px;
+		background-position:center;
+	} 
+
+}
+
+.secure-rounded{
+	@extend .cloud-rounded;
+	background-image: url('../images/secure.png');
+	background-repeat:no-repeat;
+
+	@media screen and (max-width: 360px){
+		 
+		background-image: url('../images/secure-small.png');
+ 		
+	} 
+
+}
+
+.customer-rounded{
+	@extend .cloud-rounded;
+	background-image: url('../images/customer.png');
+	background-repeat:no-repeat;
+
+	@media screen and (max-width: 360px){
+		 
+		background-image: url('../images/customer-small.png');
+ 		
+	} 
+
+}
+
+.settings-rounded{
+	@extend .cloud-rounded;
+	background-image: url('../images/settings.png');
+	background-repeat:no-repeat;
+
+	@media screen and (max-width: 360px){
+		@include clearfix;
+		background-image: url('../images/settings-small.png');
+ 		
+	} 
+}
+
+.cloud-note{
+ 	text-indent:20px;
+	color:$primary_color;
+	text-transform:uppercase;
+	font-weight:bold;
+
+	@media screen and (max-width: 360px){
+		margin-top:50px;
+		//text-indent:0px;
+		display:none;
+		width:200px;
+		position:relative;
+		left:-20px;
+		font-size:14px;
+		text-align:left;
+ 		
+	} 
+
+	@media screen and (max-width: 450px){
+		text-align:center;
+		margin-left:50px;
+ 		
+	} 
+
+
+
+	@media screen and (max-width: 961px) {
+		text-align:center;
+
+	} 
+
+
+	@media screen and (min-width: 768px) and (max-width:992px) {
+		text-align:center;
+		//background-position:center;
+	} 
+}
+
+.secure-note{
+	@extend .cloud-note;
+}
+
+.customer-note{
+	@extend .cloud-note;
+}
+
+.settings-note{
+	@extend .cloud-note;
+	position:relative;
+	top:30px;
+
+	@media screen and (max-width: 360px){	 
+		margin-top:50px;
+		text-indent:0px;
+		position:relative;
+		left:-20px;
+		font-size:14px;
+		text-align:left;
+ 		
+	} 
+
+	@media screen and (max-width: 961px) {
+		top:10px;
+
+	} 
+
+	@media screen and (min-width: 768px) and (max-width:992px) {
+		text-align:center;
+		//background-position:center;
+	} 
+}

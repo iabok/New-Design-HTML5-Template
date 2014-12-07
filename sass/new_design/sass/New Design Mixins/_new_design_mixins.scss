@@ -1,0 +1,49 @@
+
+//fonts
+@mixin font_properties($weight, $font-size, $font-name) {
+	font: $weight $font-size/0.5 $font-name, Helvetica, sans-serif;
+	font-variant: small-caps;
+
+ }
+
+//Default Border mixin
+ @mixin border_properties($pixels, $property, $color){
+ 	border: $pixels $property $color;
+ }
+
+//Types:
+//******************
+//top
+//bottom
+//null
+//********************
+//usages***
+//**********
+//border_properties_all(top, 1px, solid, #ffffff);
+
+ @mixin border_properties_all($type, $pixels, $property, $color ){
+	@if $type == bottom{
+		border-bottom: $pixels $property $color;
+	}
+
+	@else if $type == top{
+		border-top: $pixels $property $color;
+	}
+
+	@else {
+		border:$pixels $property $color;
+	}
+
+
+
+}
+
+//Services Rounded border(circles)
+ @mixin rounded_borders($rounding) {
+		-moz-border-radius: $rounding $rounding;
+		-webkit-border-radius: $rounding $rounding;
+		-khtml-border-radius: $rounding $rounding;
+		-o-border-radius: $rounding $rounding;
+		border-radius: $rounding $rounding;
+}
+

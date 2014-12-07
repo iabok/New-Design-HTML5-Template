@@ -1,0 +1,136 @@
+/* FOOTER */
+
+$newsletter_input_width:80px;
+$newsletter_input_height:50px;
+
+@import "compass/utilities/general/clearfix";
+
+
+#footer{
+	& #footer-background{
+		background-color:#000000;
+		//margin-bottom:20px;
+	}
+}
+
+.footer-header{
+	@extend .service-header;
+	font-weight:normal;
+	position:relative;
+	top:60px;
+	color:#ffffff;
+}
+
+#footer-note{
+	//font-weight:bold;
+	font-size:16px;
+	margin-top:100px;
+	text-align:center;
+	color:#606266;
+}
+
+.newsletter{
+	margin-left:300px;
+	background-position:center;
+	margin-bottom:100px;
+
+	@media screen and (max-width: 360px) {
+	margin-left:0px;
+	background-position:center;
+
+	} 
+
+
+	@media screen and (min-width: 361px) and (max-width: 767px) {
+	margin-left:0px;
+	background-position:center;
+
+	} 
+
+	@media screen and (min-width: 360px) and (max-width: 768px) {
+	margin-left:150px;
+	background-position:center;
+
+	} 
+
+	@media screen and (min-width: 768px) and (max-width:999px) {
+	margin-left:150px;
+
+	} 
+
+	 
+}
+
+input[name="email"]{
+	@include clearfix;
+	width:350px;
+	height:50px;
+	background:none;
+	color:$primary_color;
+	text-indent:20px;
+	@include border_properties(1px, solid, #ffffff);
+
+	placeholder{
+		color:$primary_color;
+
+	}
+
+	@media screen and (max-width: 360px) {
+		margin-left:-20px;
+		width:150px;
+		height:50px;
+
+	} 
+	@media screen and (max-width: 768px) {
+		margin-left:0px;
+		width:150px;
+		height:50px;
+
+	} 
+}
+
+#submit{
+	@include clearfix;
+	@extend .btn-primary;
+	background:none;
+	background-repeat:no-repeat;
+	background-position:center;
+	width:$newsletter_input_width;
+	height:$newsletter_input_height;
+	position:relative;
+	//top:-2px;
+	border:none;
+	//@include border_properties(1px, solid, #ffffff);
+	border-radius:0px;
+
+	&:hover{
+		background-image: url('../images/msg.png');
+		width:60px;
+		height:50px;
+		background-color:#242425;
+		border:none;
+		@include border_properties(1px, solid, #ffffff);
+	}
+
+}
+
+.submit-border{
+	@include clearfix;
+    @extend #submit;
+	background-image: url('../images/msg.png');
+	background-position:center;
+	display:inline-block;
+	width:60px;
+	height:50px;
+	position:relative;
+	top:17px;
+	left:-4px;
+	@include border_properties(1px, solid, #ffffff);
+
+	&:hover{
+		border:none;
+	}
+
+}
+
+/* END OF FOOTER */
